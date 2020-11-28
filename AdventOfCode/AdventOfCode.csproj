@@ -6,8 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AoCHelper" Version="*" />
+    <PackageReference Include="AoCHelper" Version="0.8.1" />
   </ItemGroup>
+
+  <PropertyGroup>
+    <NoWarn>S101</NoWarn>
+  </PropertyGroup>
 
   <ItemGroup>
     <None Update="Inputs\*">

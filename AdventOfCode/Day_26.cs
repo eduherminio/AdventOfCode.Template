@@ -12,8 +12,8 @@ namespace AdventOfCode
             _input = File.ReadAllText(InputFilePath);
         }
 
-        public override string Solve_1() => $"Solution to {ClassPrefix} {CalculateIndex()}, part 1";
+        public override string Solve_1() => _input.Length.ToString();
 
-        public override string Solve_2() => $"Solution to {ClassPrefix} {CalculateIndex()}, part 2";
+        public override string Solve_2() => throw new System.NotImplementedException();
     }
 }
