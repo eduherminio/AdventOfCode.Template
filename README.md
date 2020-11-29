@@ -35,6 +35,8 @@ Output example:
 
 By default, all your problems will be solved when running the project. You can change that by behavior by replacing `Solver.SolveAll();` in `Program.cs` with:
 
+-`Solver.SolveLast();` → solves only the last day.
+
 -`Solver.Solve<Day_XX>();` → solves only day `XX`.
 
 -`Solver.Solve(typeof(Day_XX), typeof(Day_YY));` → solves only days `XX` and `YY`.
