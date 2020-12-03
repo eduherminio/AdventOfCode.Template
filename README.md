@@ -33,15 +33,21 @@ Output example:
 - Place input files under `Inputs/` dir, following `XX.txt` convention.
 - Read the input content from `InputFilePath` and solve the puzzle by implementing `Solve_1()` and `Solve_2()`!
 
-By default, all your problems will be solved when running the project. You can change that by behavior by replacing `Solver.SolveAll();` in `Program.cs` with:
+**By default, only your last problem will be solved when running the project**. You can change that by behavior by modifying `Program.cs`:
 
--`Solver.SolveLast();` → solves only the last day.
+- `Solver.SolveAll();` → solves all the days.
 
--`Solver.Solve<Day_XX>();` → solves only day `XX`.
+- `Solver.SolveLast();` → solves only the last day.
 
--`Solver.Solve(typeof(Day_XX), typeof(Day_YY));` → solves only days `XX` and `YY`.
+- `Solver.Solve<Day_XX>();` → solves only day `XX`.
 
--`Solver.Solve(new []{ typeof(Day_XX), typeof(Day_YY) });` → same as above.
+- `Solver.Solve(XX, YY);` → solves only days `XX` and `YY`.
+
+- `Solver.Solve(new uint[] { XX, YY });` → same as above.
+
+- `Solver.Solve(typeof(Day_XX), typeof(Day_YY));` → same as above.
+
+- `Solver.Solve(new [] { typeof(Day_XX), typeof(Day_YY) });` → same as above.
 
 ## Advance usage
 
