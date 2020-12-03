@@ -1,15 +1,15 @@
 ﻿using AoCHelper;
 using System.Linq;
 
-if (args.Length == 0)       // dotnet run
+if (args.Length == 0)
 {
     Solver.SolveLast();
 }
-else if (args.Length == 1 && args[0].Contains("all", System.StringComparison.CurrentCultureIgnoreCase))     // dotnet run all | dotnet run --all
+else if (args.Length == 1 && args[0].Contains("all", System.StringComparison.CurrentCultureIgnoreCase))
 {
     Solver.SolveAll();
 }
-else        // dotnet run 1 2 5 10
+else
 {
     var indexes = args.Select(arg => uint.TryParse(arg, out var index) ? index : uint.MaxValue);
 
