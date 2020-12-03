@@ -4,7 +4,7 @@ on:
   push:
 
 jobs:
-  build:
+  build-and-run:
     runs-on: ubuntu-latest
 
     steps:
@@ -17,3 +17,7 @@ jobs:
 
     - name: Build
       run: dotnet build -c Release
+
+    - name: Solve all
+      run: dotnet run -c Release --no-build -- all
+      working-directory: ./AdventOfCode
