@@ -25,7 +25,7 @@ namespace AdventOfCode
 
 Output example:
 
-![image](https://user-images.githubusercontent.com/11148519/100517610-0987a880-318c-11eb-897d-6278a440fd44.png)
+![image](https://user-images.githubusercontent.com/11148519/101387503-d0071980-38be-11eb-96de-49b7893bb9ac.png)
 
 ## Basic usage
 
@@ -33,7 +33,9 @@ Output example:
 - Place input files under `Inputs/` dir, following `XX.txt` convention.
 - Read the input content from `InputFilePath` and solve the puzzle by implementing `Solve_1()` and `Solve_2()`!
 
-**By default, only your last problem will be solved when running the project**. You can change that by behavior by modifying `Program.cs`:
+**By default, only your last problem will be solved when running the project**. You can change that by behavior by modifying `Program.cs`.
+
+Invoking **different methods**:
 
 - `Solver.SolveAll();` → solves all the days.
 
@@ -41,14 +43,16 @@ Output example:
 
 - `Solver.Solve<Day_XX>();` → solves only day `XX`.
 
-- `Solver.Solve(XX, YY);` → solves only days `XX` and `YY`.
-
-- `Solver.Solve(new uint[] { XX, YY });` → same as above.
-
-- `Solver.Solve(typeof(Day_XX), typeof(Day_YY));` → same as above.
+- `Solver.Solve(new uint[] { XX, YY });` → solves only days `XX` and `YY`.
 
 - `Solver.Solve(new [] { typeof(Day_XX), typeof(Day_YY) });` → same as above.
 
-## Advance usage
+Providing a **custom `SolverConfiguration`** instance to any of those methods:
+
+- `Solver.SolveLast(new SolverConfiguration() { ClearConsole = false } );` → solves only the last day providing a custom configuration.
+
+- `Solver.SolveAll(new SolverConfiguration() { ElapsedTimeFormatSpecifier = "F3" } );` → solves all the days providing a custom configuration.
+
+## Advanced usage
 
 Check [AoCHelper README file](https://github.com/eduherminio/AoCHelper#advanced-usage) for detailed information about how to override the default file naming and location conventions of your problem classes and input files.
