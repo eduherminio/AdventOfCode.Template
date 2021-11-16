@@ -1,5 +1,4 @@
 ﻿using AoCHelper;
-using System.IO;
 
 namespace AdventOfCode
 {
@@ -12,8 +11,8 @@ namespace AdventOfCode
             _input = File.ReadAllText(InputFilePath);
         }
 
-        public override string Solve_1() => _input.Length.ToString();
+        public override ValueTask<string> Solve_1() => new(_input.Length.ToString());
 
-        public override string Solve_2() => throw new System.NotImplementedException();
+        public override ValueTask<string> Solve_2() => throw new System.NotImplementedException();
     }
 }

@@ -10,22 +10,22 @@ Problem example:
 
 ```csharp
 using AoCHelper;
-using System.IO;
+using System.Threading.Tasks;
 
 namespace AdventOfCode
 {
     public class Day_01 : BaseDay
     {
-        public override string Solve_1() => $"Solution 1";
+        public override ValueTask<string> Solve_1() => new($"Solution 1");
 
-        public override string Solve_2() => $"Solution 2";
+        public override ValueTask<string> Solve_2() => new($"Solution 2");
     }
 }
 ```
 
 Output example:
 
-![image](https://user-images.githubusercontent.com/11148519/101387503-d0071980-38be-11eb-96de-49b7893bb9ac.png)
+![aochelper](https://user-images.githubusercontent.com/11148519/142051856-16d9d5bf-885c-44cd-94ae-6f678bcbc04f.gif)
 
 ## Basic usage
 
