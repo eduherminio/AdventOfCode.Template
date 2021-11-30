@@ -16,9 +16,9 @@ namespace AdventOfCode
 {
     public class Day_01 : BaseDay
     {
-        public override ValueTask<string> Solve_1() => new($"Solution 1");
+        public override ValueTask<string> Solve_1() => new("Solution 1");
 
-        public override ValueTask<string> Solve_2() => new($"Solution 2");
+        public override ValueTask<string> Solve_2() => new("Solution 2");
     }
 }
 ```
