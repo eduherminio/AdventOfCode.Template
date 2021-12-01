@@ -47,7 +47,7 @@ Invoking **different methods**:
 
 - `Solver.Solve(new [] { typeof(Day_XX), typeof(Day_YY) });` → same as above.
 
-Providing a **custom `SolverConfiguration`** instance to any of those methods:
+Providing a **custom `SolverConfiguration`** instance to any of those methods ([availabe options described here](https://github.com/eduherminio/AoCHelper#customization)):
 
 - `Solver.SolveLast(new SolverConfiguration() { ClearConsole = false } );` → solves only the last day providing a custom configuration.
 
