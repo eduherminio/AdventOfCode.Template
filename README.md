@@ -51,7 +51,7 @@ Providing a **custom `SolverConfiguration`** instance to any of those methods ([
 
 - `Solver.SolveLast(new SolverConfiguration() { ClearConsole = false } );` → solves only the last day providing a custom configuration.
 
-- `Solver.SolveAll(new SolverConfiguration() { ElapsedTimeFormatSpecifier = "F3" } );` → solves all the days providing a custom configuration.
+- `Solver.SolveAll(new SolverConfiguration() { ShowConstructorElapsedTime = true, ShowTotalElapsedTimePerDay = true, ElapsedTimeFormatSpecifier = "F3" } );` → solves all the days providing a custom configuration.
 
 ## Advanced usage
 
