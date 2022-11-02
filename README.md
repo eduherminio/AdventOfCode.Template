@@ -4,7 +4,7 @@
 
 Advent of Code template based on [AoCHelper](https://github.com/eduherminio/AoCHelper) project.
 
-It allows you to focus on solving AoC puzzles while providing you with some performance stats.  
+It allows you to focus on solving AoC puzzles while providing you with some performance stats.
 
 Problem example:
 
@@ -12,15 +12,15 @@ Problem example:
 using AoCHelper;
 using System.Threading.Tasks;
 
-namespace AdventOfCode
-{
-    public class Day_01 : BaseDay
-    {
-        public override ValueTask<string> Solve_1() => new("Solution 1");
+namespace AdventOfCode;
 
-        public override ValueTask<string> Solve_2() => new("Solution 2");
-    }
+public class Day_01 : BaseDay
+{
+    public override ValueTask<string> Solve_1() => new("Solution 1");
+
+    public override ValueTask<string> Solve_2() => new("Solution 2");
 }
+
 ```
 
 Output example:
@@ -47,11 +47,20 @@ Invoking **different methods**:
 
 - `Solver.Solve(new [] { typeof(Day_XX), typeof(Day_YY) });` → same as above.
 
-Providing a **custom `SolverConfiguration`** instance to any of those methods ([availabe options described here](https://github.com/eduherminio/AoCHelper#customization)):
+Providing a **custom `Action<SolverConfiguration>`** to any of those methods ([availabe options described here](https://github.com/eduherminio/AoCHelper#customization)):
 
-- `Solver.SolveLast(new SolverConfiguration() { ClearConsole = false } );` → solves only the last day providing a custom configuration.
+- `Solver.SolveLast(opt => opt.ClearConsole = false);` → solves only the last day providing a custom configuration.
 
-- `Solver.SolveAll(new SolverConfiguration() { ShowConstructorElapsedTime = true, ShowTotalElapsedTimePerDay = true, ElapsedTimeFormatSpecifier = "F3" } );` → solves all the days providing a custom configuration.
+-
+    ```csharp
+    Solver.SolveAll(opt =>
+    {
+        opt.ShowConstructorElapsedTime = true;
+        opt.ShowTotalElapsedTimePerDay = true;
+        opt.ElapsedTimeFormatSpecifier = "F3";
+    });
+    ```
+    solves all the days providing a custom configuration.
 
 ## Advanced usage
 
